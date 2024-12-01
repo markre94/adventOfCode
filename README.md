@@ -26,8 +26,8 @@ Each day's solution is stored in its respective folder for better organization a
 ## **Usage**
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/advent-of-code-2025.git
-   cd advent-of-code-2025
+   git clone https://github.com/yourusername/adventOfCode.git
+   cd adventOfCode
    ```
 
 2. Navigate to the folder for the specific day:
