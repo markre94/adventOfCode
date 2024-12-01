@@ -65,7 +65,7 @@ Each puzzle solution includes:
 ## **Progress**
 | Day | Puzzle Name              | Part 1 | Part 2 |
 |-----|--------------------------|--------|--------|
-| 01  | TBD                      | ✅     | ✅     |
+| 01  | Historian Hysteria       | ✅     | ✅     |
 | 02  | TBD                      | ✅     | ✅     |
 | ... | ...                      | ...    | ...    |
 
