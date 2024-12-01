@@ -8,13 +8,14 @@ Welcome to my **Advent of Code 2024** repository! This repository contains my da
 Each day's solution is stored in its respective folder for better organization and ease of access:
 ```
 .
-├── day_01/
-│   ├── solution.py
-│   ├── input.txt
-├── day_02/
-│   ├── solution.py
-│   ├── input.txt
-└── ...
+├── 2024/
+   ├── day_01/
+   │   ├── solution.py
+   │   ├── input.txt
+   ├── day_02/
+   │   ├── solution.py
+   │   ├── input.txt
+   └── ...
 ```
 
 ### Folder Contents:
