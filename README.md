@@ -1,4 +1,4 @@
-# Advent of Code 2025 - Solutions  
+# Advent of Code 2024 - Solutions  
 
 Welcome to my **Advent of Code 2024** repository! This repository contains my daily solutions for the programming challenges presented in the [Advent of Code](https://adventofcode.com/2024). Advent of Code is an annual event featuring a series of holiday-themed puzzles released daily from December 1st to 25th. Each challenge sharpens programming, problem-solving, and algorithmic skills.
 
