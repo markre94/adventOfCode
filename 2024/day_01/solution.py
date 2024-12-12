@@ -24,7 +24,7 @@ def load_puzzle():
 
 
 def load_puzzle_from_file() -> tuple[list, list]:
-    puzzle_content = (Path.cwd() / "input.txt").read_text()
+    puzzle_content = (Path.cwd() / "input.txt.txt").read_text()
     return _load_puzzle(puzzle_content)
 
 

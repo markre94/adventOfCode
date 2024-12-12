@@ -2,7 +2,7 @@ from pathlib import Path
 
 
 def load_input_puzzle():
-    return (Path.cwd() / "input.txt").read_text()
+    return (Path.cwd() / "input.txt.txt").read_text()
 
 
 def get_floor_number(puzzle: str):
