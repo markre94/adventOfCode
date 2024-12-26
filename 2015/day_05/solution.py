@@ -1,6 +1,8 @@
+from collections import defaultdict
+
 from helpers.input_loader import load_input
 
-data = [
+data_ = [
     "ugknbfddgicrmopn",
     "aaa",
     "jchzalrnumimnmhp",
@@ -32,22 +34,40 @@ def count_nice_strings(input_data: list[str]):
 def count_nice_strings_part_2(input_data: list[str]):
     counted_strings = 0
 
-    for elem in input_data:
-        if any([x == z and y not in (x, z) for x, y, z in zip(elem, elem[1:], elem[2:])]):
+    for line in input_data:
+        first, second = False, False
+
+        pairs = defaultdict(int)
+        indexes = defaultdict(list)
+
+        for i in range(0, len(line) - 1):
+            elem = "".join(line[i: i + 2])
+            indexes[elem].extend([i, i + 1])
+
+            if len(set(indexes[elem])) == len(indexes[elem]):
+                pairs[elem] += 1
+
+        print(indexes)
+        if any(val > 1 for val in pairs.values()):
+            first = True
+        else:
             continue
 
-        if not any(x == y for x, y in zip(elem, elem[1:])):
-            continue
+        for i in range(0, len(line) - 2):
+            elem = line[i: i + 3]
+            # print(one, two, three)
+            if elem[0] == elem[2]:
+                # print(elem)
+                second = True
 
-        if sum(1 for ch in elem if ch in vowels) < 3:
-            continue
-
-        counted_strings += 1
+        if first and second:
+            print(f"Match: {line}")
+            counted_strings += 1
 
     return counted_strings
 
 
 if __name__ == '__main__':
     data = load_input().splitlines()
-    result = count_nice_strings(data)
+    result = count_nice_strings_part_2(data)
     print(f"Number of nice strings: {result}")
