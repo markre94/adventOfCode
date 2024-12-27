@@ -38,6 +38,10 @@ def main():
         instruction, signal = [elem.strip()
                                for elem in element.split("->")]
 
+        # PART 2
+        if signal == "b":
+            res[signal] = 46065
+
         if len(instruction.split()) == 1:
             # print(instruction, signal)
             if signal not in res:
@@ -46,7 +50,6 @@ def main():
                 else:
                     if instruction in res:
                         res[signal] = res[instruction]
-
 
         else:
             if "AND" in instruction:
