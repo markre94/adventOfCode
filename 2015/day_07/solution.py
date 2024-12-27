@@ -51,34 +51,29 @@ def main():
         else:
             if "AND" in instruction:
                 x, action, y = load_instruction(instruction)
-                # print(x, action, y)
                 if isinstance(x, int) and isinstance(y, int):
                     res[signal] = x & y
 
             elif "OR" in instruction:
                 x, action, y = load_instruction(instruction)
-                # print(x, action, y)
 
                 if isinstance(x, int) and isinstance(y, int):
                     res[signal] = x | y
 
             elif "LSHIFT" in instruction:
                 x, action, y = load_instruction(instruction)
-                # print(x, action, y)
 
                 if isinstance(x, int) and isinstance(y, int):
                     res[signal] = x << y
 
             elif "RSHIFT" in instruction:
                 x, action, y = load_instruction(instruction)
-                # print(x, action, y)
 
                 if isinstance(x, int) and isinstance(y, int):
                     res[signal] = x >> y
 
             elif "NOT" in instruction:
                 action, x = load_instruction(instruction)
-                # print(action, x)
 
                 if isinstance(x, int):
                     res[signal] = ~x
