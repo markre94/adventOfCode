@@ -48,7 +48,24 @@ def check_levels(levels: list[int]):
 
 
 def verify_codes(input_data: list[list[int]]):
-    return sum(check_levels(input_data[i]) for i in range(len(input_data)))
+    safe = 0
+    for levels in input_data:
+        output = check_levels(levels)
+
+        if output == 1:
+            safe += output
+            continue
+
+        for i in range(len(levels)):
+            reduced_list = levels[:i] + levels[i + 1:]
+            print(f"Iteration {i + 1}: {reduced_list}")
+
+            output = check_levels(reduced_list)
+            if output == 1:
+                safe += output
+                break
+
+    return safe
 
 
 if __name__ == '__main__':
