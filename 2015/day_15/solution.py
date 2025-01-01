@@ -1,7 +1,7 @@
 import re
 
 from helpers.input_loader import load_input
-from itertools import combinations_with_replacement
+from itertools import product
 from functools import reduce
 from operator import mul
 
@@ -19,14 +19,14 @@ for d in load_input().splitlines():
 print(mapped)
 
 
-res = (d for d in combinations_with_replacement(range(0, 101), 4) if sum(d) == 100)
+res = (d for d in product(range(0, 101), repeat=4) if sum(d) == 100)
 
 total_score = 0
 
 # res = [(40, 60), (99, 1)]
 
 for r in res:
-
+    # print(r)
     numbers = [0] * 5
 
     for p, v in zip(list(r), mapped.values()):
